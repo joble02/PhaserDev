@@ -11,8 +11,8 @@
     var game = new Phaser.Game(480, 320, Phaser.AUTO, null,  {preload: preload, create: create, update: update});
 
     var rocket;
-    var xspeed;
-    var yspeed;
+    var xspeed=0;
+    var yspeed=0;
     
     function preload() {
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;

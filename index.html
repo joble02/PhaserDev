@@ -23,12 +23,14 @@
         game.physics.startSystem(Phaser.Physics.P2JS);
         game.physics.p2.defaultRestitution = 0.8;
         game.world.setBounds(0, 0, game.width, game.height);
+        
         rocket = game.add.sprite(game.world.centerX, game.world.centerY, 'rocket');
         game.physics.p2.enable(rocket);
         rocket.anchor.setTo(0.5, 0.5);
         rocket.scale.x = 0.5;
         rocket.scale.y = 0.5;
-        rocket.angle=0;
+        rocket.angle = 0;
+        rocket.angularDamping = 1;
     }
     function update() {
         if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {

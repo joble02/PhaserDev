@@ -39,6 +39,9 @@
         else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
             rocket.body.rotateRight(100);
         }
+        else {
+            rocket.setZeroRotation();
+        }
 
         if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
             rocket.body.thrust(400);

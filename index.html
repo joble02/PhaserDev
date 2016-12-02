@@ -11,7 +11,9 @@
     var game = new Phaser.Game(480, 320, Phaser.AUTO, null,  {preload: preload, create: create, update: update});
 
     var rocket;
-
+    var xspeed;
+    var yspeed;
+    
     function preload() {
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         game.scale.pageAlignHorizontally = true;
@@ -34,11 +36,14 @@
         }
 
         if (game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-            rocket.y -= 4;
+            sin((rocket.angle*(-1))+90) = yspeed;
+            cos((rocket.angle*(-1))+90) = xspeed;
         }
-        else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-            rocket.y += 4;
-        }
+        //else if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+        //    rocket.y += 4;
+        //}
+        rocket.y = yspeech;
+        rocket.x = xspeech;
     }
 </script>
 </body>

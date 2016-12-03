@@ -22,7 +22,7 @@
     function create() {
         game.physics.startSystem(Phaser.Physics.P2JS);
         game.physics.p2.defaultRestitution = 0.8;
-        game.world.setBounds(0, 0, 800, 600);
+        game.world.setBounds(0, 0, 1000, 800);
         
         rocket = game.add.sprite(game.world.centerX, game.world.centerY, 'rocket');
         game.physics.p2.enable(rocket);
